@@ -1,0 +1,289 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.3.1 (swiftlang-6.3.1.1.2 clang-2100.0.123.102)
+// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 6 -O -enable-experimental-feature DebugDescriptionMacro -module-name AbridgeNotes
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.1
+import AVFoundation
+import Combine
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension AbridgeNotes.AbridgeClient {
+  public enum RecordingError : Foundation.LocalizedError {
+    case failedToWriteToBuffer(any Swift.Error)
+    case failedToGetAudioData
+    case failedToFinishChunk(any Swift.Error)
+    case failedToStartRecording(any Swift.Error)
+    case notImplemented
+    case unknown(any Swift.Error)
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+  public enum UploadingError : Foundation.LocalizedError {
+    case failedToCompleteUpload(any Swift.Error)
+    case abridgeApiNotInitialized
+    case couldNotBuildValidUrl
+    case requestError(statusCode: Swift.Int?)
+    case failedToGetAccessToken(any Swift.Error)
+    case failedToGetPartnerIdToken(any Swift.Error)
+    case completeEncounterRecordingFailed(any Swift.Error)
+    case invalidFileName
+    case didNotFindAudioFileOnDisk
+    case failedToUploadAudioChunk(any Swift.Error)
+    case notImplemented
+    case unknown(any Swift.Error)
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+  public enum InitializationError : Foundation.LocalizedError {
+    case audioSessionFailedToInitialize(any Swift.Error)
+    case notImplemented
+    case unknown(any Swift.Error)
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+  public enum ConfigurationError : Foundation.LocalizedError {
+    case abridgeClientNotInitialized
+    case failedToRetrieveEncountersToHydrate(any Swift.Error)
+    case notImplemented
+    case unknown(any Swift.Error)
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+  public enum InitializeEncounterError : Foundation.LocalizedError {
+    case abridgeClientNotInitialized
+    case clientNotProperlyConfigured
+    case encounterAlreadyExists
+    case failedToCreateEncounterDirectoryOnDisk
+    case invalidUrl
+    case requestError(statusCode: Swift.Int?)
+    case failedToGetAccessToken(any Swift.Error)
+    case failedToCreateEncounter(any Swift.Error)
+    case noEncryptionKeyFound(any Swift.Error)
+    case notImplemented
+    case unknown(any Swift.Error)
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+  public enum StartEncounterRecordingError : Foundation.LocalizedError {
+    case encounterNotFound
+    case failedToStartRecording(any Swift.Error)
+    case notImplemented
+    case unknown(any Swift.Error)
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+  public enum PauseEncounterRecordingError : Foundation.LocalizedError {
+    case encounterNotFound
+    case notImplemented
+    case unknown(any Swift.Error)
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+  public enum ResumeEncounterRecordingError : Foundation.LocalizedError {
+    case encounterNotFound
+    case failedToResumeRecording(any Swift.Error)
+    case notImplemented
+    case unknown(any Swift.Error)
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+  public enum CreateEncounterSnapshotError : Foundation.LocalizedError {
+    case encounterNotFound
+    case snapshotAlreadyCreated
+    case encounterAlreadyStopped
+    case failedToCreateSnapshot(any Swift.Error)
+    case notImplemented
+    case unknown(any Swift.Error)
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+  public enum StopEncounterRecordingError : Foundation.LocalizedError {
+    case encounterNotFound
+    case notImplemented
+    case unknown(any Swift.Error)
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+  public enum RetryEncounterUploadError : Foundation.LocalizedError {
+    case encounterNotFound
+    case encounterUploadHasNotFailed
+    case notImplemented
+    case unknown(any Swift.Error)
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+  public enum DeleteEncounterError : Foundation.LocalizedError {
+    case encounterNotFound
+    case failedToDeleteEncounter(any Swift.Error)
+    case notImplemented
+    case unknown(any Swift.Error)
+    public var errorDescription: Swift.String? {
+      get
+    }
+  }
+}
+@_hasMissingDesignatedInitializers @_Concurrency.MainActor final public class AbridgeClient : Combine.ObservableObject {
+  @_Concurrency.MainActor public static let shared: AbridgeNotes.AbridgeClient
+  nonisolated public static let version: Swift.String
+  @Combine.Published<[AbridgeNotes.Encounter]> @_projectedValueProperty($encounters) @_Concurrency.MainActor final public var encounters: [AbridgeNotes.Encounter] {
+    get
+  }
+  @_Concurrency.MainActor final public var $encounters: Combine.Published<[AbridgeNotes.Encounter]>.Publisher {
+    get
+  }
+  @_Concurrency.MainActor final public var encountersStatePublisher: Combine.AnyPublisher<[AbridgeNotes.Encounter], Swift.Never> {
+    get
+  }
+  @_Concurrency.MainActor weak final public var delegate: (any AbridgeNotes.AbridgeClientDelegate)?
+  @_Concurrency.MainActor final public var partnerId: Swift.String? {
+    get
+  }
+  @_Concurrency.MainActor final public var organizationId: Swift.String? {
+    get
+  }
+  @_Concurrency.MainActor final public var providerId: Swift.String? {
+    get
+  }
+  @_Concurrency.MainActor final public func initialize(partnerIdTokenProvider: any AbridgeNotes.PartnerIdTokenProvider, serverEnvironment: AbridgeNotes.ServerEnvironment, partnerId: Swift.String) async -> Swift.Result<Swift.Void, AbridgeNotes.AbridgeClient.InitializationError>
+  @_Concurrency.MainActor final public func configure(providerId: Swift.String, organizationId: Swift.String) async -> Swift.Result<Swift.Void, AbridgeNotes.AbridgeClient.ConfigurationError>
+  @_Concurrency.MainActor final public func initializeEncounter(customerReferenceId: Swift.String, providerSpecialty: Swift.String, ehrData: AbridgeNotes.EHRData) async -> Swift.Result<AbridgeNotes.Encounter, AbridgeNotes.AbridgeClient.InitializeEncounterError>
+  @_Concurrency.MainActor final public func startEncounterRecording(encounterId: Swift.String) -> Swift.Result<Swift.Void, AbridgeNotes.AbridgeClient.StartEncounterRecordingError>
+  @_Concurrency.MainActor final public func pauseEncounterRecording(encounterId: Swift.String) -> Swift.Result<Swift.Void, AbridgeNotes.AbridgeClient.PauseEncounterRecordingError>
+  @_Concurrency.MainActor final public func resumeEncounterRecording(encounterId: Swift.String) -> Swift.Result<Swift.Void, AbridgeNotes.AbridgeClient.ResumeEncounterRecordingError>
+  @_Concurrency.MainActor final public func createEncounterSnapshot(encounterId: Swift.String, recordingId: Swift.String) async -> Swift.Result<Swift.Void, AbridgeNotes.AbridgeClient.CreateEncounterSnapshotError>
+  @_Concurrency.MainActor final public func stopEncounterRecording(encounterId: Swift.String) async -> Swift.Result<Swift.Void, AbridgeNotes.AbridgeClient.StopEncounterRecordingError>
+  @_Concurrency.MainActor final public func deleteEncounter(encounterId: Swift.String) async -> Swift.Result<Swift.Void, AbridgeNotes.AbridgeClient.DeleteEncounterError>
+  @_Concurrency.MainActor final public func retryEncounterUpload(encounterId: Swift.String) -> Swift.Result<Swift.Void, AbridgeNotes.AbridgeClient.RetryEncounterUploadError>
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+@_Concurrency.MainActor public protocol AbridgeClientDelegate : AnyObject {
+  @_Concurrency.MainActor func didStartEncounterRecording(encounter: AbridgeNotes.Encounter)
+  @_Concurrency.MainActor func didUpdateEncounterProgress(encounter: AbridgeNotes.Encounter, duration: Swift.Float64)
+  @_Concurrency.MainActor func didPauseEncounterRecording(encounter: AbridgeNotes.Encounter)
+  @_Concurrency.MainActor func didResumeEncounterRecording(encounter: AbridgeNotes.Encounter)
+  @_Concurrency.MainActor func didStopEncounterRecording(encounter: AbridgeNotes.Encounter)
+  @_Concurrency.MainActor func didBeginEncounterRecordingInterruption(encounter: AbridgeNotes.Encounter, reason: AVFAudio.AVAudioSession.InterruptionReason?)
+  @_Concurrency.MainActor func didEndEncounterRecordingInterruption(encounter: AbridgeNotes.Encounter, options: AVFAudio.AVAudioSession.InterruptionOptions?)
+  @_Concurrency.MainActor func didReceiveEncounterRecordingError(encounter: AbridgeNotes.Encounter, error: AbridgeNotes.AbridgeClient.RecordingError)
+  @_Concurrency.MainActor func didReceiveEncounterUploadingError(encounter: AbridgeNotes.Encounter, error: AbridgeNotes.AbridgeClient.UploadingError)
+  @_Concurrency.MainActor func didUpdateUploadingProgress(encounter: AbridgeNotes.Encounter, progress: Swift.Float64)
+  @_Concurrency.MainActor func didFinishEncounterUpload(encounter: AbridgeNotes.Encounter)
+}
+extension AbridgeNotes.AbridgeClientDelegate {
+  @_Concurrency.MainActor public func didStartEncounterRecording(encounter _: AbridgeNotes.Encounter)
+  @_Concurrency.MainActor public func didUpdateEncounterProgress(encounter _: AbridgeNotes.Encounter, duration _: Swift.Float64)
+  @_Concurrency.MainActor public func didPauseEncounterRecording(encounter _: AbridgeNotes.Encounter)
+  @_Concurrency.MainActor public func didResumeEncounterRecording(encounter _: AbridgeNotes.Encounter)
+  @_Concurrency.MainActor public func didStopEncounterRecording(encounter _: AbridgeNotes.Encounter)
+  @_Concurrency.MainActor public func didBeginEncounterRecordingInterruption(encounter _: AbridgeNotes.Encounter, reason _: AVFAudio.AVAudioSession.InterruptionReason?)
+  @_Concurrency.MainActor public func didEndEncounterRecordingInterruption(encounter _: AbridgeNotes.Encounter, options _: AVFAudio.AVAudioSession.InterruptionOptions?)
+  @_Concurrency.MainActor public func didReceiveEncounterRecordingError(encounter _: AbridgeNotes.Encounter, error _: AbridgeNotes.AbridgeClient.RecordingError)
+  @_Concurrency.MainActor public func didReceiveEncounterUploadingError(encounter _: AbridgeNotes.Encounter, error _: AbridgeNotes.AbridgeClient.UploadingError)
+  @_Concurrency.MainActor public func didUpdateUploadingProgress(encounter _: AbridgeNotes.Encounter, progress _: Swift.Float64)
+  @_Concurrency.MainActor public func didFinishEncounterUpload(encounter _: AbridgeNotes.Encounter)
+}
+public enum PatientGender : Swift.Sendable {
+  case male
+  case female
+  case other
+  public static func == (a: AbridgeNotes.PatientGender, b: AbridgeNotes.PatientGender) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct EHRData : Swift.Sendable {
+  public init(patientId: Swift.String, patientDateOfBirth: Foundation.Date?, patientGender: AbridgeNotes.PatientGender?)
+  public let patientId: Swift.String
+  public let patientDateOfBirth: Foundation.Date?
+  public let patientGender: AbridgeNotes.PatientGender?
+}
+extension AbridgeNotes.EHRData : Swift.CustomStringConvertible, Swift.CustomDebugStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AbridgeNotes.EHRData : Swift.CustomReflectable {
+  public var customMirror: Swift.Mirror {
+    get
+  }
+}
+public enum RecordingStatus : Swift.String, Swift.Sendable {
+  case idle
+  case recording
+  case paused
+  case pausedSnapshot
+  case pausedHydrated
+  case stopped
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum UploadingStatus : Swift.String, Swift.Sendable {
+  case idle
+  case uploading
+  case uploaded
+  case failed
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct Encounter : Swift.Sendable {
+  public let id: Swift.String
+  public let customerReferenceId: Swift.String
+  public var recordingStatus: AbridgeNotes.RecordingStatus {
+    get
+  }
+  public var uploadingStatus: AbridgeNotes.UploadingStatus {
+    get
+  }
+  public var totalDuration: Swift.Float64 {
+    get
+  }
+}
+public protocol PartnerIdTokenProvider {
+  @_Concurrency.MainActor func getPartnerIdToken() async -> Swift.Result<Swift.String, any Swift.Error>
+}
+public enum ServerEnvironment : Swift.String, Swift.Sendable {
+  case dev
+  case integration
+  case production
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension AbridgeNotes.AbridgeClient : Swift.Sendable {}
+extension AbridgeNotes.PatientGender : Swift.Equatable {}
+extension AbridgeNotes.PatientGender : Swift.Hashable {}
+extension AbridgeNotes.RecordingStatus : Swift.Equatable {}
+extension AbridgeNotes.RecordingStatus : Swift.Hashable {}
+extension AbridgeNotes.RecordingStatus : Swift.RawRepresentable {}
+extension AbridgeNotes.UploadingStatus : Swift.Equatable {}
+extension AbridgeNotes.UploadingStatus : Swift.Hashable {}
+extension AbridgeNotes.UploadingStatus : Swift.RawRepresentable {}
+extension AbridgeNotes.ServerEnvironment : Swift.Equatable {}
+extension AbridgeNotes.ServerEnvironment : Swift.Hashable {}
+extension AbridgeNotes.ServerEnvironment : Swift.RawRepresentable {}

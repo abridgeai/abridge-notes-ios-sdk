@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  The privacy manifest for the AbridgeNotes.xcframework the partner embeds. Copied
+  to the root of each slice's framework bundle, which is where Apple reads it.
+
+  Every declaration below is derived from a call site in the shipped binary, which
+  is this framework's own sources plus AbridgeRecorderCore: the pod is statically
+  merged in (Podfile, deliberately no `use_frameworks!`), so Apple's scan of this
+  binary sees core's symbols, and the pod as consumed here carries no manifest of
+  its own to carry them: its podspec ships `Sources/**/*.swift` with no resources,
+  so these declarations are this file's to make.
+  AbridgeRecorderCore's vendored OpusEncoder is merged in too and reaches no
+  required-reason API — `nm -u` over both libOpusEncoder.a slices finds no
+  stat/fstat/getattrlist/statfs symbol.
+
+  Both categories are declared because the symbol is in the binary, which is
+  what Apple's submission check scans — not because a runtime path is known to
+  reach it. The call site that earns each, and the reason chosen:
+
+    NSPrivacyAccessedAPICategoryFileTimestamp / C617.1
+      AbridgeRecorderCore EncounterRecordingRepository.loadAll reads the
+      creation date of each persisted recording to sort them oldest-first,
+      through both keys Apple lists for this category —
+      URLResourceKey.creationDateKey, passed to contentsOfDirectory, and
+      FileAttributeKey.creationDate, read out of attributesOfItem. (The
+      FileManager methods themselves are not on Apple's list; the keys are.)
+      This runs on every configure, through the SDK's restoration path, so it is
+      live usage rather than a declaration made for a symbol nothing reaches.
+      C617.1 is "metadata of files inside the app container", which these are:
+      the audio recordings AbridgeRecorderCore persists under the host's
+      Documents directory. (Not the SDK's own encounter records, which live
+      under Application Support and are read without any timestamp key.)
+
+    NSPrivacyAccessedAPICategorySystemBootTime / 35F9.1
+      AbridgeRecorderCore EncounterRecordingManager.emitAudioLevel reads
+      ProcessInfo.systemUptime as the clock its 100ms audio-level throttle
+      measures against — 35F9.1's "time that has elapsed between events that
+      occurred within the app". 35F9.1 also forbids sending the value
+      off-device, which holds absolutely here: emitAudioLevel returns at its
+      `guard enableAudioLevelMetering` before the read, because the SDK is the
+      one caller that builds the manager with metering off, and no SDK request
+      body or delegate callback carries an audio level or a timestamp either way.
+      8FFB.1 would be the reason for stamping absolute event times; that is not
+      what this does.
+
+  The other three categories are absent because no call site exists: no
+  UserDefaults, no disk-space (volumeAvailableCapacity / statfs) and no
+  active-keyboard (UITextInputMode.activeInputModes) reference in either source
+  tree, and none of those symbols in the built binary.
+
+  NSPrivacyTracking is false and NSPrivacyTrackingDomains empty because the
+  framework links no analytics, crash-reporting or advertising SDK — its imports
+  are Apple frameworks plus the local OpusEncoder, and the delivery build asserts
+  that no such library is linked in — and its only egress is the Abridge API host
+  for the selected ServerEnvironment: api-dev / api-test / api.abridge.care.
+
+  NSPrivacyCollectedDataTypes is deliberately absent rather than empty. An empty
+  array is the affirmative claim that nothing is collected, which would be wrong:
+  the framework uploads encounter audio and the patient and provider identifiers
+  the host supplies. How those map onto Apple's data types for an embedding app's
+  disclosure is not settled in this file, and this file does not assert it.
+  Section 4 of the integration guide, under "What the SDK sends off-device", lists
+  every value the SDK transmits and on which request — the input that disclosure
+  needs.
+-->
+<plist version="1.0">
+<dict>
+	<key>NSPrivacyAccessedAPITypes</key>
+	<array>
+		<dict>
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategoryFileTimestamp</string>
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<string>C617.1</string>
+			</array>
+		</dict>
+		<dict>
+			<key>NSPrivacyAccessedAPIType</key>
+			<string>NSPrivacyAccessedAPICategorySystemBootTime</string>
+			<key>NSPrivacyAccessedAPITypeReasons</key>
+			<array>
+				<string>35F9.1</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSPrivacyTracking</key>
+	<false/>
+	<key>NSPrivacyTrackingDomains</key>
+	<array/>
+</dict>
+</plist>
