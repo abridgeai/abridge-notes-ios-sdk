@@ -16,7 +16,7 @@ your app target. Xcode embeds and signs the framework for you.
 
 ```swift
 dependencies: [
-  .package(url: "https://github.com/abridgeai/abridge-notes-ios-sdk.git", exact: "0.1.0")
+  .package(url: "https://github.com/abridgeai/abridge-notes-ios-sdk.git", exact: "0.2.0")
 ],
 targets: [
   .target(

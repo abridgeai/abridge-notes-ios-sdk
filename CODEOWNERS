@@ -1,0 +1,4 @@
+# Every file here is published to a partner: the framework is a build artifact
+# and the rest is the contract around it. Releases are pushed by the documented
+# procedure in clinician-app packages/AthenaSDK/README.md § Delivery.
+* @abridgeai/mobile-team

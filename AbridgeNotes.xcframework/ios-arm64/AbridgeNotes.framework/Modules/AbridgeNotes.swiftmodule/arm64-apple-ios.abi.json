@@ -8560,7 +8560,7 @@
       "kind": "StringLiteral",
       "offset": 9157,
       "length": 7,
-      "value": "\"0.1.0\""
+      "value": "\"0.2.0\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
@@ -8572,49 +8572,49 @@
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "IntegerLiteral",
-      "offset": 70120,
+      "offset": 71964,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "IntegerLiteral",
-      "offset": 70313,
+      "offset": 72157,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "StringLiteral",
-      "offset": 76397,
+      "offset": 78343,
       "length": 69,
       "value": "\"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_+\/.\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 3933,
+      "offset": 4103,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 4675,
+      "offset": 4847,
       "length": 3,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 7291,
+      "offset": 7498,
       "length": 14,
       "value": "\"access_token\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 7329,
+      "offset": 7536,
       "length": 12,
       "value": "\"expires_in\""
     },
@@ -8628,84 +8628,84 @@
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "Array",
-      "offset": 18090,
+      "offset": 18104,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "Dictionary",
-      "offset": 18147,
+      "offset": 18161,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "Dictionary",
-      "offset": 18323,
+      "offset": 18337,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "Dictionary",
-      "offset": 18816,
+      "offset": 18830,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "Dictionary",
-      "offset": 20350,
+      "offset": 20364,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "IntegerLiteral",
-      "offset": 20383,
+      "offset": 20397,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "Dictionary",
-      "offset": 20645,
+      "offset": 20659,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "IntegerLiteral",
-      "offset": 20677,
+      "offset": 20691,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "Array",
-      "offset": 21002,
+      "offset": 21016,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "Array",
-      "offset": 21126,
+      "offset": 21140,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "Array",
-      "offset": 21472,
+      "offset": 21486,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "BooleanLiteral",
-      "offset": 21503,
+      "offset": 21517,
       "length": 5,
       "value": "false"
     },
@@ -8754,28 +8754,28 @@
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/EncounterStore.swift",
       "kind": "IntegerLiteral",
-      "offset": 950,
+      "offset": 1564,
       "length": 1,
-      "value": "1"
+      "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/EncounterStore.swift",
       "kind": "IntegerLiteral",
-      "offset": 4630,
+      "offset": 5457,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/EncounterStore.swift",
       "kind": "StringLiteral",
-      "offset": 4661,
+      "offset": 5488,
       "length": 25,
       "value": "\"ai.abridge.AbridgeNotes\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/EncounterStore.swift",
       "kind": "BooleanLiteral",
-      "offset": 4701,
+      "offset": 5528,
       "length": 4,
       "value": "true"
     },
