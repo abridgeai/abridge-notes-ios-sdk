@@ -1,0 +1,136 @@
+Abridge Notes iOS SDK License
+
+Last updated: September 28, 2026
+
+PLEASE READ THIS LICENSE CAREFULLY BEFORE DOWNLOADING, INSTALLING, ACCESSING, OR
+USING THE SDK.
+
+This Abridge Notes iOS SDK License (this “License”) is a legal agreement
+between Abridge AI, Inc. (“Abridge,” “we,” or “us”) and the individual or entity
+that downloads, installs, accesses, or uses the software development kit made
+available in this repository (“you”). By downloading, installing, accessing, or
+using the SDK, you agree to this License. If you do not agree, do not download,
+install, access, or use the SDK.
+
+1. Definitions
+
+“SDK” means the compiled Abridge Notes iOS software development kit binary,
+any sample code, and the accompanying Documentation made available in this
+repository, together with any updates Abridge makes available here.
+
+“Abridge Services” means the hosted services, APIs, and back-end systems
+operated by Abridge that the SDK is designed to access.
+
+“Documentation” means the README and other materials Abridge provides with the
+SDK.
+
+2. Precedence of separate agreements
+
+If you and Abridge (or an Abridge affiliate) have entered into a separate
+written agreement that governs your use of the SDK or the Abridge Services, that
+agreement governs and controls over this License to the extent of any conflict,
+and your rights with respect to the SDK under this License, including usage of
+it with Abridge Services, are modified to that extent. For clarity, this License
+applies only to the extent not superseded by or modified to the extent of any
+conflict with, in whole or in part, such an agreement.
+
+3. License grant
+
+Subject to your compliance with this License, and only if and for so long as and
+to the extent that Abridge has authorized you to access the Abridge Services,
+Abridge grants you a limited, personal, non-exclusive, non-transferable,
+non-sublicensable, revocable license to download and install the SDK and to use
+it solely to develop and operate an authorized integration with the Abridge
+Services, to the extent of such authorization. No other use is permitted. If
+Abridge has not authorized you to access the Abridge Services, no license is
+granted to you under this License, and any download, installation, or use of the
+SDK is without license and outside the scope of any rights granted herein.
+
+4. Authorization required for use
+
+The SDK is made available for download publicly as a matter of distribution
+convenience. Downloading or possessing the SDK does not grant any right to
+access or use the Abridge Services. Access to the Abridge Services requires
+separate authentication credentials issued by Abridge and is subject to the
+terms under which those credentials are issued and the separate agreement
+governing the use of Abridge Services under Section 2. Abridge may withhold,
+suspend, or revoke authorization at any time.
+
+5. Restrictions
+
+Except as expressly permitted in this License or in a separate agreement under
+Section 2, you will not, and will not permit any third party to:
+
+(a) copy, distribute, sublicense, sell, rent, lease, or otherwise make the SDK
+available to any third party;
+
+(b) modify, adapt, or create derivative works of the SDK;
+
+(c) reverse engineer, decompile, disassemble, or otherwise attempt to derive the
+source code, structure, or underlying ideas of the SDK, except to the extent
+this restriction is prohibited by applicable law;
+
+(d) remove, alter, or obscure any proprietary notices in the SDK or
+Documentation;
+
+(e) use the SDK to build or improve a competing product or service; or
+
+(f) use the SDK other than as expressly authorized, or in violation of
+applicable law.
+
+6. Ownership
+
+The SDK is licensed, not sold. Abridge and its licensors retain all right,
+title, and interest in and to the SDK, the Abridge Services, and all related
+intellectual property rights. No rights are granted to you under this License
+except as expressly set out in this License.
+
+7. Third-party components
+
+The SDK may include third-party open source components that are licensed under
+their own terms, as identified in the NOTICE file accompanying the SDK. Those
+terms govern your use of the applicable components, and nothing in this License
+limits your rights, or your obligations, under them.
+
+8. Feedback
+
+If you provide Abridge with suggestions or feedback regarding the SDK, Abridge
+may use it for any purpose without obligation to you.
+
+9. Disclaimer of warranties
+
+THE SDK IS PROVIDED “AS IS” AND “AS AVAILABLE,” WITHOUT WARRANTY OF ANY KIND,
+WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING BUT NOT LIMITED TO WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND
+NON-INFRINGEMENT. ABRIDGE DOES NOT WARRANT THAT THE SDK WILL BE ERROR-FREE OR
+UNINTERRUPTED.
+
+10. Limitation of liability
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, ABRIDGE WILL NOT BE LIABLE FOR ANY
+INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, OR FOR ANY
+LOSS OF PROFITS, REVENUE, OR DATA, ARISING OUT OF OR RELATING TO THIS LICENSE,
+THE SDK, OR THE USE THEREOF, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+11. Termination
+
+This License is effective until terminated. It terminates automatically if you
+breach any of its terms, and Abridge may otherwise terminate or suspend it at
+any time. Upon termination, you must stop using and delete all copies of the
+SDK. Sections 2, 5–6, and 9–12 survive termination.
+
+12. General
+
+This License will be governed by and construed in accordance with the laws of
+the State of California without giving effect to any principles of conflict of
+laws that would lead to the application of the laws of another jurisdiction. Any
+legal action or proceeding arising under this License will be brought
+exclusively in the federal or state courts located in the State of California
+and the parties irrevocably consent to the personal jurisdiction and venue
+therein. This License (together with any separate agreement under Section 2 and
+the third-party terms under Section 7) is the entire agreement between you and
+Abridge regarding the SDK. If any provision is held unenforceable, the remaining
+provisions remain in effect. Abridge’s failure to enforce any provision is not a
+waiver. You may not assign this License without Abridge’s prior written consent.
+
+Abridge AI, Inc. All rights reserved.
