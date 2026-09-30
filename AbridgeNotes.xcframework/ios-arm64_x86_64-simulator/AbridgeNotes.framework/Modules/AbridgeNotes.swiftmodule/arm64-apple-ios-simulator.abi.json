@@ -8046,9 +8046,12 @@
             "mangledName": "$s12AbridgeNotes9EncounterV13totalDurationSdvp",
             "moduleName": "AbridgeNotes",
             "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
               "AccessControl",
               "RawDocComment"
             ],
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -8066,6 +8069,7 @@
                 "usr": "s:12AbridgeNotes9EncounterV13totalDurationSdvg",
                 "mangledName": "$s12AbridgeNotes9EncounterV13totalDurationSdvg",
                 "moduleName": "AbridgeNotes",
+                "implicit": true,
                 "accessorKind": "get"
               }
             ]
@@ -8529,92 +8533,148 @@
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4728,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4769,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "Dictionary",
-      "offset": 5084,
+      "offset": 5313,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "Dictionary",
-      "offset": 5333,
+      "offset": 5562,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "Dictionary",
-      "offset": 5852,
+      "offset": 6081,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "IntegerLiteral",
-      "offset": 7593,
+      "offset": 8016,
       "length": 2,
       "value": "28"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "StringLiteral",
-      "offset": 9157,
+      "offset": 9580,
       "length": 7,
-      "value": "\"0.2.0\""
+      "value": "\"1.0.0\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "Array",
-      "offset": 9355,
+      "offset": 9778,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "IntegerLiteral",
-      "offset": 71964,
+      "offset": 80259,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "IntegerLiteral",
-      "offset": 72157,
+      "offset": 80452,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "StringLiteral",
-      "offset": 78343,
+      "offset": 87099,
       "length": 69,
       "value": "\"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_+\/.\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4154,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 4103,
+      "offset": 5833,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 4847,
+      "offset": 6577,
       "length": 3,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6917,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7335,
+      "length": 6,
+      "value": "86400"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 7498,
+      "offset": 8675,
+      "length": 13,
+      "value": "\"en_US_POSIX\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
+      "kind": "StringLiteral",
+      "offset": 8736,
+      "length": 5,
+      "value": "\"GMT\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
+      "kind": "StringLiteral",
+      "offset": 8770,
+      "length": 31,
+      "value": "\"EEE, dd MMM yyyy HH:mm:ss zzz\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
+      "kind": "StringLiteral",
+      "offset": 13016,
       "length": 14,
       "value": "\"access_token\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 7536,
+      "offset": 13054,
       "length": 12,
       "value": "\"expires_in\""
     },
@@ -8778,6 +8838,27 @@
       "offset": 5528,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/SDKAPI+CompleteUpload.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1486,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/SDKAPI+UploadChunk.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1666,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/SDKAPI.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1453,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/UploadRetryPolicy.swift",
