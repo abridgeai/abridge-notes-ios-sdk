@@ -5,11 +5,13 @@
   to the root of each slice's framework bundle, which is where Apple reads it.
 
   Every declaration below is derived from a call site in the shipped binary, which
-  is this framework's own sources plus AbridgeRecorderCore: the pod is statically
-  merged in (Podfile, deliberately no `use_frameworks!`), so Apple's scan of this
-  binary sees core's symbols, and the pod as consumed here carries no manifest of
-  its own to carry them: its podspec ships `Sources/**/*.swift` with no resources,
-  so these declarations are this file's to make.
+  is this framework's own sources plus AbridgeRecorderCore and Sentry: both pods
+  are statically merged in (Podfile, deliberately no `use_frameworks!`), so Apple's
+  scan of this binary sees their symbols, and neither carries a manifest of its own
+  into the framework. Core's podspec ships `Sources/**/*.swift` with no resources;
+  Sentry's resource bundle is not copied (see the Podfile's post_integrate), because
+  it declares data that SentrySDK.start collects and this framework never calls it.
+  So these declarations are this file's to make.
   AbridgeRecorderCore's vendored OpusEncoder is merged in too and reaches no
   required-reason API — `nm -u` over both libOpusEncoder.a slices finds no
   stat/fstat/getattrlist/statfs symbol.
@@ -31,6 +33,9 @@
       the audio recordings AbridgeRecorderCore persists under the host's
       Documents directory. (Not the SDK's own encounter records, which live
       under Application Support and are read without any timestamp key.)
+      Sentry's SentryCrashFileUtils also calls stat (a directory check before
+      deleting a path's contents) and fstat (a file's size before reading it),
+      on files under Sentry's own cache directory in the same container.
 
     NSPrivacyAccessedAPICategorySystemBootTime / 35F9.1
       AbridgeRecorderCore EncounterRecordingManager.emitAudioLevel reads
@@ -44,25 +49,44 @@
       8FFB.1 would be the reason for stamping absolute event times; that is not
       what this does.
 
-  The other three categories are absent because no call site exists: no
-  UserDefaults, no disk-space (volumeAvailableCapacity / statfs) and no
-  active-keyboard (UITextInputMode.activeInputModes) reference in either source
-  tree, and none of those symbols in the built binary.
+  The other three categories are absent because none of their symbols is in the
+  built binary: no UserDefaults, no disk-space (volumeAvailableCapacity / statfs)
+  and no active-keyboard (UITextInputMode.activeInputModes) reference. Sentry's
+  one UserDefaults read, in SentryUncaughtNSExceptions, is compiled for macOS
+  only.
 
-  NSPrivacyTracking is false and NSPrivacyTrackingDomains empty because the
-  framework links no analytics, crash-reporting or advertising SDK — its imports
-  are Apple frameworks plus the local OpusEncoder, and the delivery build asserts
-  that no such library is linked in — and its only egress is the Abridge API host
-  for the selected ServerEnvironment: api-dev / api-test / api.abridge.care.
+  NSPrivacyTracking is false and NSPrivacyTrackingDomains empty because nothing
+  in the framework tracks, in Apple's sense of linking data with third-party data
+  for advertising or sharing it with a data broker. Sentry is bundled for the
+  SDK's own error reports, sent to Abridge's Sentry project through a client the
+  SDK owns; it is never started process-wide, so it installs no crash, signal or
+  uncaught-exception handler. Its client still registers dyld image callbacks and
+  reads the host app's state and view-controller names while preparing a report;
+  the report is rebuilt from an allowlist that carries neither. The delivery
+  build asserts that no analytics, attribution or other crash-reporting library
+  is bundled. The framework's egress is the Abridge API host for the selected
+  ServerEnvironment (api-dev / api-test / api.abridge.care) and Sentry's ingest
+  host.
 
-  NSPrivacyCollectedDataTypes is deliberately absent rather than empty. An empty
-  array is the affirmative claim that nothing is collected, which would be wrong:
-  the framework uploads encounter audio and the patient and provider identifiers
-  the host supplies. How those map onto Apple's data types for an embedding app's
-  disclosure is not settled in this file, and this file does not assert it.
-  Section 4 of the integration guide, under "What the SDK sends off-device", lists
-  every value the SDK transmits and on which request — the input that disclosure
-  needs.
+  NSPrivacyCollectedDataTypes declares three types:
+
+    AudioData, linked, app functionality
+      The encounter audio, uploaded to Abridge to produce the note.
+
+    UserID, linked, app functionality
+      The provider id, patient id and customerReferenceId the host supplies
+      with each encounter.
+
+    OtherDiagnosticData, not linked, other purposes
+      The SDK's own error reports, through the bundled Sentry client. This
+      entry belongs to that error reporting and goes with it. Not CrashData or
+      PerformanceData: no crash handler is installed and nothing is traced.
+
+  None is used for tracking. The patient's date of birth and gender, optional
+  on create, are not declared as a type of their own; the integration guide
+  asks the host to cover them in its own disclosure. Section 4 of the
+  integration guide, under "What the SDK sends off-device" and "Error
+  reporting", lists every value the SDK transmits and on which request.
 -->
 <plist version="1.0">
 <dict>
@@ -82,6 +106,45 @@
 			<key>NSPrivacyAccessedAPITypeReasons</key>
 			<array>
 				<string>35F9.1</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSPrivacyCollectedDataTypes</key>
+	<array>
+		<dict>
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeAudioData</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<true/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeAppFunctionality</string>
+			</array>
+		</dict>
+		<dict>
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeUserID</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<true/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeAppFunctionality</string>
+			</array>
+		</dict>
+		<dict>
+			<key>NSPrivacyCollectedDataType</key>
+			<string>NSPrivacyCollectedDataTypeOtherDiagnosticData</string>
+			<key>NSPrivacyCollectedDataTypeLinked</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypeTracking</key>
+			<false/>
+			<key>NSPrivacyCollectedDataTypePurposes</key>
+			<array>
+				<string>NSPrivacyCollectedDataTypePurposeOther</string>
 			</array>
 		</dict>
 	</array>

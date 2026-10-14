@@ -1074,6 +1074,63 @@
           },
           {
             "kind": "Function",
+            "name": "stopEncounterRecordingWithId",
+            "printedName": "stopEncounterRecordingWithId(encounterId:recordingId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Result",
+                "printedName": "Swift.Result<(), AbridgeNotes.AbridgeClient.StopEncounterRecordingError>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "StopEncounterRecordingError",
+                    "printedName": "AbridgeNotes.AbridgeClient.StopEncounterRecordingError",
+                    "usr": "s:12AbridgeNotes0A6ClientC27StopEncounterRecordingErrorO"
+                  }
+                ],
+                "usr": "s:s6ResultO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12AbridgeNotes0A6ClientC28stopEncounterRecordingWithId09encounterH009recordingH0s6ResultOyytAC04StopeF5ErrorOGSS_SSSgtYaF",
+            "mangledName": "$s12AbridgeNotes0A6ClientC28stopEncounterRecordingWithId09encounterH009recordingH0s6ResultOyytAC04StopeF5ErrorOGSS_SSSgtYaF",
+            "moduleName": "AbridgeNotes",
+            "declAttributes": [
+              "Custom",
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "deleteEncounter",
             "printedName": "deleteEncounter(encounterId:)",
             "children": [
@@ -8201,6 +8258,31 @@
       },
       {
         "kind": "Import",
+        "name": "Sentry",
+        "printedName": "Sentry",
+        "declKind": "Import",
+        "moduleName": "AbridgeNotes",
+        "declAttributes": [
+          "ImplementationOnly",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AbridgeNotes"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AbridgeNotes"
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -8226,6 +8308,34 @@
         "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "AbridgeNotes"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "AbridgeNotes"
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "AbridgeNotes",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Sentry",
+        "printedName": "Sentry",
+        "declKind": "Import",
+        "moduleName": "AbridgeNotes",
+        "declAttributes": [
+          "ImplementationOnly"
+        ]
       },
       {
         "kind": "TypeDecl",
@@ -8504,6 +8614,20 @@
   },
   "ConstValues": [
     {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AbridgeClient+Uploading.swift",
+      "kind": "Dictionary",
+      "offset": 3745,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AbridgeClient+Uploading.swift",
+      "kind": "Dictionary",
+      "offset": 4468,
+      "length": 3,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "Array",
       "offset": 2877,
@@ -8575,197 +8699,225 @@
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
-      "kind": "StringLiteral",
-      "offset": 9580,
-      "length": 7,
-      "value": "\"1.0.0\""
+      "kind": "IntegerLiteral",
+      "offset": 8197,
+      "length": 2,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
+      "kind": "Dictionary",
+      "offset": 8437,
+      "length": 3,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "Array",
-      "offset": 9778,
+      "offset": 8485,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
+      "kind": "StringLiteral",
+      "offset": 11450,
+      "length": 7,
+      "value": "\"1.1.0\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
+      "kind": "Array",
+      "offset": 11648,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "IntegerLiteral",
-      "offset": 80259,
+      "offset": 93159,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "IntegerLiteral",
-      "offset": 80452,
+      "offset": 93352,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/AbridgeClient.swift",
       "kind": "StringLiteral",
-      "offset": 87099,
+      "offset": 100054,
       "length": 69,
       "value": "\"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_+\/.\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 4154,
+      "offset": 4559,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 5833,
+      "offset": 6723,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 6577,
+      "offset": 7509,
       "length": 3,
       "value": "\"\/\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 6917,
+      "offset": 7849,
       "length": 2,
       "value": "60"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 7335,
+      "offset": 8267,
       "length": 6,
       "value": "86400"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 8675,
+      "offset": 9607,
       "length": 13,
       "value": "\"en_US_POSIX\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 8736,
+      "offset": 9668,
       "length": 5,
       "value": "\"GMT\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 8770,
+      "offset": 9702,
       "length": 31,
       "value": "\"EEE, dd MMM yyyy HH:mm:ss zzz\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 13016,
+      "offset": 13948,
       "length": 14,
       "value": "\"access_token\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/AccessTokenManager.swift",
       "kind": "StringLiteral",
-      "offset": 13054,
+      "offset": 13986,
       "length": 12,
       "value": "\"expires_in\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "IntegerLiteral",
-      "offset": 1068,
+      "offset": 1156,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
-      "kind": "Array",
-      "offset": 18104,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
-      "kind": "Dictionary",
-      "offset": 18161,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
-      "kind": "Dictionary",
-      "offset": 18337,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
-      "kind": "Dictionary",
-      "offset": 18830,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
-      "kind": "Dictionary",
-      "offset": 20364,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "IntegerLiteral",
-      "offset": 20397,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
-      "kind": "Dictionary",
-      "offset": 20659,
-      "length": 3,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
-      "kind": "IntegerLiteral",
-      "offset": 20691,
+      "offset": 19195,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "Array",
-      "offset": 21016,
+      "offset": 20733,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
+      "kind": "Dictionary",
+      "offset": 20790,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
+      "kind": "Dictionary",
+      "offset": 20966,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
+      "kind": "Dictionary",
+      "offset": 21459,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
+      "kind": "Dictionary",
+      "offset": 22993,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 23026,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
+      "kind": "Dictionary",
+      "offset": 23288,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
+      "kind": "IntegerLiteral",
+      "offset": 23320,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
+      "kind": "Array",
+      "offset": 23645,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "Array",
-      "offset": 21140,
+      "offset": 23769,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "Array",
-      "offset": 21486,
+      "offset": 24115,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/ChunkUploader.swift",
       "kind": "BooleanLiteral",
-      "offset": 21517,
+      "offset": 24146,
       "length": 5,
       "value": "false"
     },
@@ -8814,35 +8966,42 @@
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/EncounterStore.swift",
       "kind": "IntegerLiteral",
-      "offset": 1564,
+      "offset": 2310,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/EncounterStore.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2406,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/EncounterStore.swift",
       "kind": "IntegerLiteral",
-      "offset": 5457,
+      "offset": 6855,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/EncounterStore.swift",
       "kind": "StringLiteral",
-      "offset": 5488,
+      "offset": 6886,
       "length": 25,
       "value": "\"ai.abridge.AbridgeNotes\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/EncounterStore.swift",
       "kind": "BooleanLiteral",
-      "offset": 5528,
+      "offset": 6926,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/SDKAPI+CompleteUpload.swift",
       "kind": "BooleanLiteral",
-      "offset": 1486,
+      "offset": 1824,
       "length": 4,
       "value": "true"
     },
@@ -8856,9 +9015,114 @@
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/SDKAPI.swift",
       "kind": "BooleanLiteral",
-      "offset": 1453,
+      "offset": 1532,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/Telemetry\/SDKTelemetry.swift",
+      "kind": "Dictionary",
+      "offset": 1164,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/Telemetry\/SDKTelemetry.swift",
+      "kind": "Dictionary",
+      "offset": 1556,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/Telemetry\/SDKTelemetry.swift",
+      "kind": "Array",
+      "offset": 2707,
+      "length": 384,
+      "value": "[\"encounter_id\", \"http_status\", \"retry_after\", \"url_error_code\", \"abandoned_chunks\", \"backoff_seconds\", \"chunk_count\", \"chunk_number\", \"expected_count\", \"found_count\", \"from\", \"limit_seconds\", \"missing\", \"outcome\", \"pending_chunks\", \"promoted\", \"reason\", \"recording_status\", \"restored\", \"retry\", \"should_resume\", \"silence_seconds\", \"step\", \"uploading_status\"]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/Telemetry\/SDKTelemetry.swift",
+      "kind": "StringLiteral",
+      "offset": 3544,
+      "length": 41,
+      "value": "\"[A-Za-z][A-Za-z0-9+.\\-]*:\/\/[^\\s\"'<>]*\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/Telemetry\/SDKTelemetry.swift",
+      "kind": "StringLiteral",
+      "offset": 3661,
+      "length": 37,
+      "value": "\"(~|\\.{1,2})?(\/[^\\s\/\"'<>:]+){2,}\/?\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/Telemetry\/SDKTelemetry.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3993,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/Telemetry\/SDKTelemetry.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6442,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/Telemetry\/SDKTelemetry.swift",
+      "kind": "StringLiteral",
+      "offset": 7502,
+      "length": 6,
+      "value": "\"host\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/Telemetry\/SDKTelemetry.swift",
+      "kind": "StringLiteral",
+      "offset": 7549,
+      "length": 22,
+      "value": "\"AbridgeRecorderCore.\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/Telemetry\/SDKTelemetry.swift",
+      "kind": "StringLiteral",
+      "offset": 7768,
+      "length": 25,
+      "value": "\"AVFoundationErrorDomain\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/Telemetry\/SDKTelemetry.swift",
+      "kind": "Array",
+      "offset": 7979,
+      "length": 11,
+      "value": "[\"NSError\"]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/Telemetry\/SDKTelemetry.swift",
+      "kind": "Array",
+      "offset": 8028,
+      "length": 79,
+      "value": "[\"Swift\", \"_Concurrency\", \"Foundation\", \"Dispatch\", \"AVFAudio\", \"AVFoundation\"]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/Telemetry\/SentryTelemetry.swift",
+      "kind": "StringLiteral",
+      "offset": 408,
+      "length": 87,
+      "value": "\"https:\/\/ce387d1c3b4c2da9a8fadacd2c3d9d2b@o576502.ingest.us.sentry.io\/4508258872918016\""
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/Telemetry\/SentryTelemetry.swift",
+      "kind": "Array",
+      "offset": 4655,
+      "length": 90,
+      "value": "[\"sdk_version\", \"partner_id\", \"organization_id\", \"env\", \"encounter_id\", \"source\"]"
+    },
+    {
+      "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/Telemetry\/SentryTelemetry.swift",
+      "kind": "StringLiteral",
+      "offset": 4777,
+      "length": 14,
+      "value": "\"AbridgeNotes\""
     },
     {
       "filePath": "\/Users\/vagrant\/git\/packages\/AthenaSDK\/Sources\/AbridgeNotes\/Internal\/UploadRetryPolicy.swift",

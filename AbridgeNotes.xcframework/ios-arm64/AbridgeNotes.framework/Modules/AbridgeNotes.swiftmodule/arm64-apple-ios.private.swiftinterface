@@ -165,6 +165,7 @@ extension AbridgeNotes.AbridgeClient {
   @_Concurrency.MainActor final public func resumeEncounterRecording(encounterId: Swift.String) -> Swift.Result<Swift.Void, AbridgeNotes.AbridgeClient.ResumeEncounterRecordingError>
   @_Concurrency.MainActor final public func createEncounterSnapshot(encounterId: Swift.String, recordingId: Swift.String) async -> Swift.Result<Swift.Void, AbridgeNotes.AbridgeClient.CreateEncounterSnapshotError>
   @_Concurrency.MainActor final public func stopEncounterRecording(encounterId: Swift.String) async -> Swift.Result<Swift.Void, AbridgeNotes.AbridgeClient.StopEncounterRecordingError>
+  @_Concurrency.MainActor final public func stopEncounterRecordingWithId(encounterId: Swift.String, recordingId: Swift.String?) async -> Swift.Result<Swift.Void, AbridgeNotes.AbridgeClient.StopEncounterRecordingError>
   @_Concurrency.MainActor final public func deleteEncounter(encounterId: Swift.String) async -> Swift.Result<Swift.Void, AbridgeNotes.AbridgeClient.DeleteEncounterError>
   @_Concurrency.MainActor final public func retryEncounterUpload(encounterId: Swift.String) -> Swift.Result<Swift.Void, AbridgeNotes.AbridgeClient.RetryEncounterUploadError>
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
